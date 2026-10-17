@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Психея — застосунок для самопізнання / Psyche</title>
+<meta name="description" content="Психея — iOS-застосунок із психологічними опитувальниками та 14-денним самоспостереженням. Дані залишаються на вашому iPhone. Psyche, a self-knowledge app for iPhone by Oleksandr Odizhnyi.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6c6c70;
+    --card: #f2f2f7;
+    --accent: #8c611f;
+    --border: #d1d1d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --text: #f2f2f7;
+      --muted: #a1a1a6;
+      --card: #1c1c1e;
+      --accent: #d9ad61;
+      --border: #38383a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+  .brand { font-weight: 700; font-size: 20px; font-family: "New York", Georgia, "Times New Roman", serif; color: var(--accent); }
+  nav.lang { display: flex; gap: 4px; background: var(--card); border-radius: 10px; padding: 3px; }
+  nav.lang button {
+    border: 0; background: transparent; color: var(--text); font: inherit; font-size: 15px;
+    padding: 6px 14px; border-radius: 8px; cursor: pointer;
+  }
+  nav.lang button[aria-pressed="true"] { background: var(--bg); color: var(--accent); font-weight: 600; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 24px 0 4px; font-family: "New York", Georgia, "Times New Roman", serif; }
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+  .summary { background: var(--card); border-radius: 14px; padding: 16px 18px; margin: 0 0 28px; }
+  .summary p { margin: 0; }
+  h2 { font-size: 20px; margin: 32px 0 8px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  .tagline { font-size: 19px; color: var(--muted); margin: 0 0 24px; }
+  .features { list-style: none; padding: 0; display: grid; gap: 10px; margin: 0 0 8px; }
+  .features li { background: var(--card); border-radius: 14px; padding: 14px 16px; margin: 0; }
+  .features strong { display: block; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">Психея</div>
+    <nav class="lang" aria-label="Мова / Language">
+      <button type="button" data-set-lang="uk" aria-pressed="true">Українська</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+    </nav>
+  </header>
+
+  <article data-lang="uk" lang="uk" class="active">
+    <h1>Психея</h1>
+    <p class="tagline">Застосунок для самопізнання й самоспостереження на iPhone</p>
+
+    <ul class="features">
+      <li><strong>Психологічні опитувальники</strong>Перевірені шкали, як-от GAD-7 для оцінки тривоги, з поясненням результату простою мовою.</li>
+      <li><strong>14-денне самоспостереження</strong>Короткі щоденні записи стану й чинників, щоб побачити, що на вас впливає.</li>
+      <li><strong>Історія та PDF-звіт</strong>Зберігайте підсумки, стежте за змінами й діліться звітом із фахівцем, якщо хочете.</li>
+      <li><strong>Приватність</strong>Без облікового запису, реклами й аналітики. Ваші дані зберігаються лише на вашому iPhone.</li>
+      <li><strong>Повна версія</strong>Відкриває поглиблені тести. Основні опитувальники доступні безкоштовно.</li>
+    </ul>
+
+    <h2>Де завантажити</h2>
+    <p>Психея незабаром з’явиться в App Store.</p>
+
+    <h2>Важливо</h2>
+    <p>Результати мають ознайомчий характер і не є діагнозом. Якщо вам важко, безкоштовна цілодобова лінія «Людина в біді» — 0 800 210 160, екстрена допомога — 112.</p>
+
+    <h2>Розробник</h2>
+    <p>Oleksandr Odizhnyi, незалежний розробник з України. Пошта: <a href="mailto:uranodua@gmail.com">uranodua@gmail.com</a>.</p>
+    <p class="links"><a href="support.html#uk">Підтримка</a><a href="./#uk">Політика конфіденційності</a></p>
+  </article>
+
+  <article data-lang="en" lang="en">
+    <h1>Psyche</h1>
+    <p class="tagline">A self-knowledge and self-observation app for iPhone</p>
+
+    <ul class="features">
+      <li><strong>Psychological questionnaires</strong>Validated scales such as GAD-7 for anxiety, with results explained in plain language.</li>
+      <li><strong>14-day self-observation</strong>Short daily notes on your state and its triggers, so you can see what affects you.</li>
+      <li><strong>History and PDF report</strong>Save your results, track changes, and share a report with a professional if you choose.</li>
+      <li><strong>Privacy</strong>No account, no ads, no analytics. Your data stays on your iPhone.</li>
+      <li><strong>Full Version</strong>Unlocks in-depth tests. The core questionnaires are free.</li>
+    </ul>
+
+    <h2>Download</h2>
+    <p>Psyche is coming soon to the App Store.</p>
+
+    <h2>Important</h2>
+    <p>Results are for information only and are not a diagnosis. If things are hard, the free 24/7 line “People in Need” (Ukraine) is 0 800 210 160; emergency services: 112.</p>
+
+    <h2>Developer</h2>
+    <p>Oleksandr Odizhnyi, an independent developer from Ukraine. Email: <a href="mailto:uranodua@gmail.com">uranodua@gmail.com</a>.</p>
+    <p class="links"><a href="support.html#en">Support</a><a href="./#en">Privacy Policy</a></p>
+  </article>
+
+  <footer>Психея · © 2026 Oleksandr Odizhnyi</footer>
+</main>
+<script>
+  (function () {
+    var buttons = document.querySelectorAll("[data-set-lang]");
+    function show(lang) {
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.classList.toggle("active", el.getAttribute("data-lang") === lang);
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang));
+      });
+      document.documentElement.lang = lang;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var lang = b.getAttribute("data-set-lang");
+        show(lang);
+        history.replaceState(null, "", "#" + lang);
+      });
+    });
+    var fromHash = location.hash.replace("#", "");
+    var preferred = (navigator.language || "uk").toLowerCase().startsWith("uk") ? "uk" : "en";
+    show(fromHash === "en" || fromHash === "uk" ? fromHash : preferred);
+  })();
+</script>
+</body>
+</html>
